@@ -1,4 +1,1 @@
-export type Animal = {
-    imageUrl: any;
-    name: string;
-};
+export type { VocabularyItem as Animal } from "./vocabulary";

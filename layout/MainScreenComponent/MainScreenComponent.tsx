@@ -1,65 +1,55 @@
+import { useRouter, type Href } from "expo-router";
 import React from "react";
-import { Text, Image, StyleSheet, Pressable, Dimensions } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { Image, StyleSheet, useWindowDimensions } from "react-native";
+import { AppText } from "@/components/AppText";
+import { AnimatedTile } from "@/components/AnimatedTile";
+import { IconFrame } from "@/components/IconFrame";
+import { tapFeedback } from "@/features/haptics";
+import type { MenuItem } from "@/types/menuItem";
+import { getTileSize } from "@/theme/layout";
+import { iconInnerSize } from "@/theme/iconFrame";
 
-type Props = {
-  imageUrl: any;
-  nameEng: string;
-};
+type Props = Pick<MenuItem, "imageUrl" | "nameEng" | "route">;
 
-const screenWidth = Dimensions.get("window").width;
-
-const getSize = () => {
-  if (screenWidth <= 429) {
-    return screenWidth * 0.4;
-  }
-  return 180;
-};
-
-export const MainScreenComponent: React.FC<Props> = ({
-  imageUrl,
-  nameEng,
-}) => {
-  const navigation = useNavigation<any>();
+export const MainScreenComponent = ({ imageUrl, nameEng, route }: Props) => {
+  const router = useRouter();
+  const { width } = useWindowDimensions();
+  const size = getTileSize(width);
+  const imageSize = iconInnerSize(size);
 
   const handlePress = () => {
-    navigation.navigate(nameEng.toLowerCase());
+    tapFeedback();
+    router.push(route as Href);
   };
 
-  const size = getSize();
-
   return (
-    <Pressable style={[styles.container, { width: size }]} onPress={handlePress}>
-      <Image
-        source={imageUrl}
-        style={[
-          styles.image,
-          { width: size, height: size }
-        ]}
-        resizeMode="cover"
-      />
-
-      <Text style={[styles.nameEng]}>{nameEng}</Text>
-    </Pressable>
+    <AnimatedTile
+      style={[styles.tile, { width: size }]}
+      onPress={handlePress}
+      accessibilityRole="button"
+      accessibilityLabel={nameEng}
+    >
+      <IconFrame size={size}>
+        <Image
+          source={imageUrl}
+          style={{ width: imageSize, height: imageSize }}
+          resizeMode="contain"
+        />
+      </IconFrame>
+      <AppText weight="bold" style={styles.nameEng}>
+        {nameEng}
+      </AppText>
+    </AnimatedTile>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
+  tile: {
     margin: 8,
+    alignItems: "center",
   },
-
-  image: {
-    borderRadius: 40,
-  },
-
   nameEng: {
-    fontSize: 18, // приблизно 1.1rem
-    fontWeight: "bold",
-    color: "white",
+    fontSize: 18,
+    marginTop: 4,
   },
 });

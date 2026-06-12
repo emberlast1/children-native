@@ -1,2 +1,3 @@
-import { Days  } from "@/layout/Days/Days";
-export default Days;
+import { DaysScreen } from "@/components/DaysScreen";
+
+export default DaysScreen;

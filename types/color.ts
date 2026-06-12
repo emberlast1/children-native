@@ -1,4 +1,1 @@
-export type Color = {
-    colorHash: string;
-    name: string;
-};
+export type { LabeledColorItem as Color } from "./labeledItem";

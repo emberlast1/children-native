@@ -1,0 +1,15 @@
+export const colors = {
+  primary: "#3D9CAD",
+  accent: "#5BB8C9",
+  border: "#2E8594",
+  textOnPrimary: "#FFFFFF",
+  screenBackground: "#3D9CAD",
+  gradientLight: "#FFFFFF",
+  gradientTint: "#E8F6F8",
+  colorsScreen: "#CDE097",
+  daysScreen: "#5B8DEF",
+  mathScreen: "#7EB6D9",
+  countScreen: "#F5C16C",
+  alphabetScreen: "#C9D8F0",
+  numbersScreen: "#B8E0D2",
+} as const;

@@ -1,2 +1,6 @@
-import { Fruits } from "@/layout/Fruits/Fruits";
-export default Fruits;
+import { VocabularyScreen } from "@/components/VocabularyScreen";
+import { fruitsData } from "@/data/fruitsData";
+
+export default function FruitsRoute() {
+  return <VocabularyScreen items={fruitsData} theme="fruits" />;
+}

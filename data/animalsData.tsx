@@ -88,10 +88,6 @@ export const animalsData = [
         name: "Camel",
     },
     {
-        imageUrl: require("../assets/images/animals/hare.png"),
-        name: "Hare",
-    },
-    {
         imageUrl: require("../assets/images/animals/frog.png"),
         name: "Frog",
     },
@@ -106,9 +102,5 @@ export const animalsData = [
     {
         imageUrl: require("../assets/images/animals/owl.png"),
         name: "Owl",
-    },
-    {
-        imageUrl: require("../assets/images/animals/goat.png"),
-        name: "Goat",
     },
 ];

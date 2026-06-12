@@ -1,2 +1,3 @@
-import { Colors } from "@/layout/Colors/Colors";
-export default Colors;
+import { ColorsScreen } from "@/components/ColorsScreen";
+
+export default ColorsScreen;

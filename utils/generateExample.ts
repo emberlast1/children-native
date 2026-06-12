@@ -9,12 +9,15 @@ type Example = {
 };
 
 export const generateExample = (): Example => {
-  const a = randomNumber({ min: 1, max: 5 });
-  const b = randomNumber({ min: 1, max: 5 });
+  let a = randomNumber({ min: 1, max: 5 });
+  let b = randomNumber({ min: 1, max: 5 });
   const operator: "plus" | "minus" = Math.random() > 0.5 ? "plus" : "minus";
 
-  const correct =
-    operator === "plus" ? a + b : Math.abs(a - b);
+  if (operator === "minus" && b > a) {
+    [a, b] = [b, a];
+  }
+
+  const correct = operator === "plus" ? a + b : a - b;
 
   const options = new Set<number>();
   options.add(correct);
