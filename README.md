@@ -173,12 +173,36 @@ npm start            # делегує в ChildrenEng
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Перевірка TypeScript (`tsc --noEmit`) |
 | `npm test` | Unit-тести Jest |
+| `npm run prepare:store-assets` | Іконки 1024×1024 для сторів |
+| `npm run build:android` | Production AAB (Google Play) |
+| `npm run build:ios` | Production IPA (App Store) |
+| `npm run submit:android` | Завантажити останній build у Play Console |
+| `npm run submit:ios` | Завантажити останній build у App Store Connect |
+
+---
+
+## Публікація в Google Play та App Store
+
+Повний покроковий гайд (без створення акаунтів розробника):
+
+- **[docs/STORE_PUBLISHING.md](docs/STORE_PUBLISHING.md)** — збірка EAS, чеклист, Play Console, App Store Connect
+- **[docs/PRIVACY_POLICY.md](docs/PRIVACY_POLICY.md)** — політика конфіденційності (опублікуйте на HTTPS URL)
+- **[docs/STORE_LISTING.md](docs/STORE_LISTING.md)** — описи, keywords, release notes
+
+**Ідентифікатори:** `com.emberlast.ChildrenEng` · **версія:** `1.0.0`
+
+```bash
+npm install -g eas-cli
+eas login
+npm run build:android   # AAB для Google Play
+npm run build:ios       # для App Store
+```
 
 ---
 
 ## Збірка
 
-Конфігурація Expo — у `app.json`. Для production-збірок через EAS Build:
+Конфігурація Expo — у `app.json`, профілі EAS — у `eas.json`.
 
 ```bash
 eas build --profile production
