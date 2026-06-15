@@ -8,7 +8,7 @@ store-assets/
     android-phone/
     ios-iphone/
     ios-ipad/
-  feature-graphic-1024x500.png   # Google Play only — create in Figma/Canva
+  feature-graphic-1024x500.png   # Google Play — npm run generate:feature-graphic
 ```
 
 Build-time icons are generated into `assets/`:

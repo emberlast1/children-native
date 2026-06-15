@@ -2,7 +2,7 @@
 
 **Last updated:** June 2026  
 **App name:** ChildrenEng  
-**Contact:** YOUR_CONTACT_EMAIL
+**Contact:** lordanvil18@gmail.com
 
 ---
 
@@ -47,7 +47,7 @@ We may update this policy. The “Last updated” date will change when we do. C
 
 ### Contact
 
-Questions about this policy: **YOUR_CONTACT_EMAIL**
+Questions about this policy: **lordanvil18@gmail.com**
 
 ---
 
@@ -90,4 +90,4 @@ ChildrenEng — освітній застосунок для дітей, яки�
 
 ### Контакти
 
-Питання щодо політики: **YOUR_CONTACT_EMAIL**
+Питання щодо політики: **lordanvil18@gmail.com**

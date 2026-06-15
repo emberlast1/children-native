@@ -1,22 +1,13 @@
 # Store listing copy — ChildrenEng
-
-Готові тексти для Google Play та App Store. За потреби адаптуйте під локаль.
-
----
-
 ## App name
 
 **ChildrenEng**
 
----
 
 ## Short description (Google Play, max 80 chars)
 
 ```
 Learn English for kids with pictures, voice, and fun mini-games.
-```
-
-Українською (альтернатива, якщо потрібна локалізація):
 
 ```
 Англійська для дітей: картинки, озвучення та веселі міні-ігри.

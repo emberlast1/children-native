@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit",
     "test": "jest",
     "prepare:store-assets": "node scripts/prepare-store-assets.mjs",
+    "generate:feature-graphic": "node scripts/generate-feature-graphic.mjs",
     "build:preview:android": "eas build --platform android --profile preview",
     "build:preview:ios": "eas build --platform ios --profile preview",
     "build:android": "eas build --platform android --profile production",
