@@ -22,6 +22,7 @@ import Animated, {
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Speech from "expo-speech";
 import { AppText } from "@/components/AppText";
+import { ParentFooterLinks } from "@/components/ParentFooterLinks";
 import { ThemedAnimatedBackground } from "@/components/ThemedAnimatedBackground";
 import { WELCOME_MESSAGE } from "@/data/welcomeContent";
 import { speak } from "@/features/speak";
@@ -185,6 +186,7 @@ export const WelcomeScreen = ({ onComplete }: Props) => {
             </Animated.View>
           </Animated.View>
         </Pressable>
+        <ParentFooterLinks style={styles.parentFooter} />
       </SafeAreaView>
     </View>
   );
@@ -262,5 +264,8 @@ const styles = StyleSheet.create({
     color: colors.primary,
     textAlign: "center",
     zIndex: 2,
+  },
+  parentFooter: {
+    paddingBottom: 8,
   },
 });

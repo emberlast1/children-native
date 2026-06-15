@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, StyleSheet, useWindowDimensions, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StaggeredEntrance } from "@/components/StaggeredEntrance";
+import { ParentFooterLinks } from "@/components/ParentFooterLinks";
 import { ThemedAnimatedBackground } from "@/components/ThemedAnimatedBackground";
 import { menuHubItems } from "@/data/mainScreenData";
 import { MenuHubTile } from "@/layout/MenuHubTile/MenuHubTile";
@@ -37,6 +38,7 @@ export const MainScreen = () => {
               </StaggeredEntrance>
             ))}
           </View>
+          <ParentFooterLinks style={styles.footer} />
         </ScrollView>
       </SafeAreaView>
     </View>
@@ -73,5 +75,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 40,
     paddingHorizontal: 16,
+  },
+  footer: {
+    marginTop: 32,
   },
 });
